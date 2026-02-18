@@ -63,8 +63,8 @@ document.addEventListener('DOMContentLoaded', () => {
     animateCounters();
 
     // === Scroll Animations ===
-    const animEls = document.querySelectorAll('.animate-on-scroll');
     function checkAnims() {
+        const animEls = document.querySelectorAll('.animate-on-scroll');
         animEls.forEach(el => {
             if (el.getBoundingClientRect().top < window.innerHeight * 0.85) el.classList.add('animated');
         });

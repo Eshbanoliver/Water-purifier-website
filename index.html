@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -18,11 +18,11 @@
 <body>
     <!-- TOP BAR -->
     <div class="top-bar">
-        <div class="container">
+        <div class="container container-wide">
             <div class="top-bar-left">
                 <a href="mailto:info@example.com" class="top-bar-item"><i
                         class="fas fa-envelope"></i><span>info@example.com</span></a>
-                <a href="#" class="top-bar-item"><i class="fas fa-map-marker-alt"></i><span>12/7 Aabol, Poor Street,
+                <a href="#" class="top-bar-item"><i class="fas fa-map-marker-alt"></i><span>12/7 Aabot, Poor Street,
                         Mumbai</span></a>
             </div>
             <div class="top-bar-right">
@@ -38,89 +38,156 @@
 
     <!-- HEADER -->
     <header class="header" id="header">
-        <div class="container">
-            <a href="index.html" class="logo"><i class="fas fa-tint logo-icon"></i><span>Aquato<span
-                        class="logo-dot">.</span></span></a>
+        <div class="container container-wide">
+            <a href="index.html" class="logo"><i class="fas fa-tint logo-icon"></i><span>Aquato</span></a>
             <nav class="nav" id="nav">
                 <ul class="nav-list">
                     <li><a href="index.html" class="nav-link active">Home</a><span class="nav-dot"></span></li>
                     <li><a href="about.html" class="nav-link">About Us</a><span class="nav-dot"></span></li>
                     <li><a href="#" class="nav-link">Gallery</a><span class="nav-dot"></span></li>
                     <li><a href="#" class="nav-link">Pages</a><span class="nav-dot"></span></li>
-                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a><span class="nav-dot"></span></li>
                     <li><a href="#" class="nav-link">Blog</a><span class="nav-dot"></span></li>
                     <li><a href="contact.html" class="nav-link">Contact Us</a></li>
                 </ul>
             </nav>
             <div class="header-right">
-                <button class="hamburger-btn" aria-label="Menu"><span></span><span></span><span></span></button>
                 <button class="menu-toggle" id="menuToggle"
                     aria-label="Toggle Menu"><span></span><span></span><span></span></button>
+                <div class="hamburger-icon-wrapper">
+                    <i class="fas fa-bars"></i>
+                </div>
             </div>
         </div>
     </header>
 
     <!-- HERO -->
     <section class="hero" id="home">
-        <div class="hero-bg"></div>
+        <div class="hero-bg-overlay"></div>
         <div class="container hero-container">
             <div class="hero-content">
-                <p class="hero-subtitle">Welcome to Aqua Water</p>
+                <div class="hero-subtitle-banner">WATER IS NOTHING BUT LIFE</div>
                 <h1 class="hero-title">Mineral Water<br>With Great Taste</h1>
-                <p class="hero-desc">We provide the purest mineral water sourced from natural springs, delivering
-                    freshness and health to your doorstep every day.</p>
+                <p class="hero-desc">Vivamus mattis ipsum vitae imperdiet eleifend. Nunc scelerisque feugiat turpis, et
+                    tempor tellus porta vitae. Aenean hendrerit, libero sed viverra auctor, est tortor pulvinar sem, non
+                    luctus ante quam quis urna.</p>
                 <div class="hero-btns">
-                    <a href="about.html" class="btn btn-primary">Learn More</a>
-                    <a href="services.html" class="btn btn-outline">Our Services</a>
+                    <a href="about.html" class="btn btn-hero">READ MORE</a>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=500&q=80" alt="Water Bottle"
-                    class="hero-bottle">
-                <div class="hero-circle"></div>
-                <div class="hero-circle hero-circle-2"></div>
+            <div class="hero-jug-showcase">
+                <img src="https://images.unsplash.com/photo-1559839914-17aae19cec71?w=800&q=80" alt="Pure Water Jug"
+                    class="hero-main-jug">
+                <img src="https://images.unsplash.com/photo-1559839914-17aae19cec71?w=800&q=80" alt="Pure Water Jug"
+                    class="hero-jug-secondary">
             </div>
         </div>
-        <div class="hero-wave">
-            <svg viewBox="0 0 1440 120" fill="none">
-                <path
-                    d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,64C960,75,1056,85,1152,80C1248,75,1344,53,1392,42.7L1440,32V120H0Z"
-                    fill="#ffffff" />
-            </svg>
+        <div class="hero-slant-bottom"></div>
+    </section>
+
+    <!-- WHAT'S OUR STORY (Cards) -->
+    <section class="story-section" style="padding: 100px 0 60px; background: var(--bg-light);">
+        <div class="container">
+            <div class="section-header" style="margin-bottom: 50px;">
+                <h2 class="section-title" style="font-size: 3rem; font-weight: 800; margin-bottom: 10px;">What's Our
+                    Story</h2>
+                <div class="squiggle-sep" style="margin-bottom: 24px;">
+                    <svg width="60" height="12" viewBox="0 0 60 12" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        style="display: block; margin: 0 auto;">
+                        <path
+                            d="M0 6C5 6 5 1 10 1C15 1 15 6 20 6C25 6 25 11 30 11C35 11 35 6 40 6C45 6 45 1 50 1C55 1 55 6 60 6"
+                            stroke="#6366f1" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </div>
+                <p class="section-desc" style="max-width: 800px; margin: 0 auto;">Our company was founded in 2008. Water
+                    Brand bottle is great for drinking, cooking, activities, and even for children. The product is
+                    certified in 50 countries.</p>
+            </div>
+
+            <div class="services-cards-grid">
+                <div class="service-card" style="position: relative; overflow: hidden;">
+                    <div class="service-card-icon"
+                        style="background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);"><i
+                            class="fas fa-flask"></i></div>
+                    <h4>Quality Check</h4>
+                    <p>Nulla lacinia odio purus, sed varius eros aucto.</p>
+                    <div class="card-wave-bg"
+                        style="position: absolute; bottom: 0; left: 0; width: 100%; height: 60px; background: rgba(99, 102, 241, 0.05); clip-path: polygon(0% 100%, 100% 100%, 100% 40%, 80% 50%, 60% 40%, 40% 60%, 20% 40%, 0% 60%); z-index: -1;">
+                    </div>
+                </div>
+                <div class="service-card" style="position: relative; overflow: hidden;">
+                    <div class="service-card-icon"
+                        style="background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);"><i
+                            class="fas fa-filter"></i></div>
+                    <h4>Filteration Level</h4>
+                    <p>Nulla lacinia odio purus, sed varius eros aucto.</p>
+                    <div class="card-wave-bg"
+                        style="position: absolute; bottom: 0; left: 0; width: 100%; height: 60px; background: rgba(99, 102, 241, 0.05); clip-path: polygon(0% 100%, 100% 100%, 100% 40%, 80% 50%, 60% 40%, 40% 60%, 20% 40%, 0% 60%); z-index: -1;">
+                    </div>
+                </div>
+                <div class="service-card" style="position: relative; overflow: hidden;">
+                    <div class="service-card-icon"
+                        style="background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);"><i
+                            class="fas fa-vial"></i></div>
+                    <h4>Composition</h4>
+                    <p>Nulla lacinia odio purus, sed varius eros aucto.</p>
+                    <div class="card-wave-bg"
+                        style="position: absolute; bottom: 0; left: 0; width: 100%; height: 60px; background: rgba(99, 102, 241, 0.05); clip-path: polygon(0% 100%, 100% 100%, 100% 40%, 80% 50%, 60% 40%, 40% 60%, 20% 40%, 0% 60%); z-index: -1;">
+                    </div>
+                </div>
+                <div class="service-card" style="position: relative; overflow: hidden;">
+                    <div class="service-card-icon"
+                        style="background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);"><i
+                            class="fas fa-microscope"></i></div>
+                    <h4>Lab Control</h4>
+                    <p>Nulla lacinia odio purus, sed varius eros aucto.</p>
+                    <div class="card-wave-bg"
+                        style="position: absolute; bottom: 0; left: 0; width: 100%; height: 60px; background: rgba(99, 102, 241, 0.05); clip-path: polygon(0% 100%, 100% 100%, 100% 40%, 80% 50%, 60% 40%, 40% 60%, 20% 40%, 0% 60%); z-index: -1;">
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- ABOUT -->
+    <!-- ABOUT SECTION -->
     <section class="about-section" id="about">
         <div class="container">
-            <div class="section-header">
-                <p class="section-subtitle">About Us</p>
-                <h2 class="section-title">What's Our Story</h2>
-                <div class="section-line"></div>
-                <p class="section-desc">From humble beginnings to becoming a trusted name in mineral water, our journey
-                    has always been driven by quality and care.</p>
-            </div>
             <div class="about-grid">
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80" alt="Our Team">
-                    <div class="about-image-badge">
-                        <span class="badge-number">36</span>
-                        <span class="badge-text">Years of<br>Experience</span>
+                <div class="about-image-column">
+                    <div class="about-decor-bars">
+                        <div class="bar bar-purple"></div>
+                        <div class="bar bar-blue"></div>
+                    </div>
+                    <div class="about-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80"
+                            alt="Professional Team" class="about-main-img">
+                        <div class="about-exp-badge">
+                            <span class="exp-num">35</span>
+                            <span class="exp-label">Years of<br>Experience</span>
+                        </div>
                     </div>
                 </div>
-                <div class="about-content">
-                    <h3>We Deliver The<br>Quality Water</h3>
-                    <p>Our commitment to excellence means every drop of water we deliver undergoes rigorous quality
-                        testing and purification processes.</p>
-                    <p>With over 36 years of experience, we've built a reputation for reliability, purity, and customer
-                        satisfaction.</p>
-                    <ul class="about-list">
-                        <li><i class="fas fa-check-circle"></i> Natural Spring Sources</li>
-                        <li><i class="fas fa-check-circle"></i> Advanced Purification</li>
-                        <li><i class="fas fa-check-circle"></i> Lab Tested Quality</li>
-                        <li><i class="fas fa-check-circle"></i> Eco-Friendly Packaging</li>
+                <div class="about-content-column">
+                    <h2 class="about-main-title">We Deliver The Quality Water</h2>
+                    <div class="about-desc-wrapper">
+                        <p>Donec dictum non eros ut sollicitudin. Sed vel nisl nec odio venenatis pretium. Aenean a
+                            condimentum metus. Nulla scelerisque elit aliquet, volutpat lorem ac, accumsan enim. Duis
+                            malesuada varius leo, eu pellentesque metus pharetra a. Nam commodo ut diam ut laoreet.</p>
+                        <p>Morbi pretium, nisl sit amet placerat imperdiet, enim massa venenatis purus, in tincidunt
+                            lorem augue ac nunc. Pellentesque risus massa, vulputate cursus tortor quis, iaculis maximus
+                            neque. Aenean hendrerit, libero sed viverra auctor.</p>
+                    </div>
+                    <ul class="about-checklist">
+                        <li><i class="fas fa-check-circle"></i> <span>Praesent quis elit egestas, sagittis orci vel,
+                                vehicula erat tiam et luctus.</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span>Vivamus efficitur mollis turpis. Ut nec dui
+                                commodo, egestas dolor.</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span>Nunc eleifend pulvinar sapien convallis
+                                eleifend.</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span>Mauris vel nisi quis massa facilisis consectetur
+                                vel at erat et porttitor.</span></li>
                     </ul>
-                    <a href="about.html" class="btn btn-primary">Read More</a>
+                    <a href="about.html" class="btn btn-primary about-btn">LEARN MORE</a>
                 </div>
             </div>
         </div>
@@ -150,30 +217,99 @@
         </div>
     </section>
 
-    <!-- STORY/SERVICES -->
-    <section class="story-section" id="services">
+    <!-- WHAT'S OUR STORY (BOTTLE SHOWCASE) -->
+    <section class="bottle-feature-section" id="story">
         <div class="container">
-            <div class="section-header">
-                <p class="section-subtitle">Our Services</p>
-                <h2 class="section-title">What's Our Story</h2>
-                <div class="section-line"></div>
-            </div>
-            <div class="story-grid">
-                <div class="story-content">
-                    <p>We are dedicated to providing the freshest and most pure drinking water available. Our facilities
-                        use cutting-edge filtration systems.</p>
-                    <p>From residential delivery to commercial partnerships, we offer flexible solutions tailored to
-                        your needs.</p>
-                    <div class="story-features">
-                        <div class="story-feature"><i class="fas fa-tint"></i><span>Pure Water</span></div>
-                        <div class="story-feature"><i class="fas fa-recycle"></i><span>Eco Friendly</span></div>
-                        <div class="story-feature"><i class="fas fa-flask"></i><span>Lab Tested</span></div>
-                    </div>
-                    <a href="services.html" class="btn btn-primary">Discover More</a>
+            <div class="section-header" style="margin-bottom: 60px;">
+                <h2 class="section-title" style="font-size: 3.5rem; font-weight: 900; margin-bottom: 12px;">What's Our
+                    Story</h2>
+                <div class="squiggle-sep" style="margin-bottom: 24px;">
+                    <svg width="60" height="12" viewBox="0 0 60 12" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        style="display: block; margin: 0 auto;">
+                        <path
+                            d="M0 6C5 6 5 1 10 1C15 1 15 6 20 6C25 6 25 11 30 11C35 11 35 6 40 6C45 6 45 1 50 1C55 1 55 6 60 6"
+                            stroke="#6366f1" stroke-width="2" stroke-linecap="round" />
+                    </svg>
                 </div>
-                <div class="story-image">
-                    <img src="https://images.unsplash.com/photo-1559839914-17aae19cec71?w=500&q=80" alt="Water Jug">
-                    <div class="story-image-shape"></div>
+                <p class="section-desc" style="max-width: 800px; margin: 0 auto;">Our company was founded in 2008. Water
+                    Brand bottle is great for drinking, cooking, activities, and even for children. The product is
+                    certified in 50 countries.</p>
+            </div>
+
+            <div class="bottle-grid-container">
+                <!-- Left Features -->
+                <div class="features-side features-left">
+                    <div class="feature-item-alt">
+                        <div class="feature-text text-right">
+                            <h4>No Preservatives</h4>
+                            <p>Praesent porttitor, velit et dapibus eleifend, ligula sapien placerat sem, vel sodale.
+                            </p>
+                        </div>
+                        <div class="feature-icon-wrapper">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                    </div>
+                    <div class="feature-item-alt">
+                        <div class="feature-text text-right">
+                            <h4>Add Micro Mineral</h4>
+                            <p>Praesent porttitor, velit et dapibus eleifend, ligula sapien placerat sem, vel sodale.
+                            </p>
+                        </div>
+                        <div class="feature-icon-wrapper">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                    </div>
+                    <div class="feature-item-alt">
+                        <div class="feature-text text-right">
+                            <h4>Natural Quality</h4>
+                            <p>Praesent porttitor, velit et dapibus eleifend, ligula sapien placerat sem, vel sodale.
+                            </p>
+                        </div>
+                        <div class="feature-icon-wrapper">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Center Bottle -->
+                <div class="bottle-central-image">
+                    <img src="https://images.unsplash.com/photo-1559839914-17aae19cec71?w=800&q=80" alt="Pure Water Jug"
+                        class="main-jug-img">
+                    <div class="jug-reflections"></div>
+                </div>
+
+                <!-- Right Features -->
+                <div class="features-side features-right">
+                    <div class="feature-item-alt">
+                        <div class="feature-icon-wrapper">
+                            <i class="fas fa-shield-virus"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Antioxidant</h4>
+                            <p>Praesent porttitor, velit et dapibus eleifend, ligula sapien placerat sem, vel sodale.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="feature-item-alt">
+                        <div class="feature-icon-wrapper">
+                            <i class="fas fa-pills"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>All Vitamins</h4>
+                            <p>Praesent porttitor, velit et dapibus eleifend, ligula sapien placerat sem, vel sodale.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="feature-item-alt">
+                        <div class="feature-icon-wrapper">
+                            <i class="fas fa-glass-water"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Taste Like Home</h4>
+                            <p>Praesent porttitor, velit et dapibus eleifend, ligula sapien placerat sem, vel sodale.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -274,7 +410,8 @@
                 <div class="testimonial-card">
                     <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
                     <h4 class="testimonial-heading">Taste Like Heaven</h4>
-                    <p class="testimonial-text">The water quality is exceptional. My family has been using Aquato water
+                    <p class="testimonial-text">The water quality is exceptional. My family has been using Shantiraj
+                        water
                         for years and we couldn't be happier with the service and taste.</p>
                     <div class="testimonial-author">
                         <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=80&q=80" alt="Client">
@@ -287,7 +424,7 @@
                 <div class="testimonial-card">
                     <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
                     <h4 class="testimonial-heading">Taste Like Imperdiet</h4>
-                    <p class="testimonial-text">We switched our entire office to Aquato water and the difference is
+                    <p class="testimonial-text">We switched our entire office to Shantiraj water and the difference is
                         remarkable. Reliable delivery and outstanding purity every single time.</p>
                     <div class="testimonial-author">
                         <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&q=80" alt="Client">
@@ -431,21 +568,20 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="footer-wave"><svg viewBox="0 0 1440 120" fill="none">
-                <path
-                    d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,64C960,75,1056,85,1152,80C1248,75,1344,53,1392,42.7L1440,32V120H0Z"
-                    fill="#0a1628" />
-            </svg></div>
         <div class="footer-main">
             <div class="container">
                 <div class="footer-grid">
                     <div class="footer-col footer-about">
-                        <a href="index.html" class="footer-logo"><i class="fas fa-tint"></i><span>Aquato<span
-                                    class="logo-dot">.</span></span></a>
-                        <p>Aenean pulvinar lacoreet tellus ut tinct. Praesent a lectus egestas, finibus enim sit amet,
-                            mollis lorem. Sed a volutpat velit. Pellentesque habitant morbi tristique senectus et.</p>
-                        <div class="footer-social"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i
-                                    class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="index.html" class="footer-logo">
+                            <i class="fas fa-tint"></i>
+                            <span>Aquato</span>
+                        </a>
+                        <p>Aenean pulvinar laoreet tellus ut tinct. Praesent a lectus egestas, finibus enim sit amet,
+                            mollis lorem. Sed a volutpat velit. Pellet habitant morbi tristique senectus et.</p>
+                        <div class="footer-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
                     <div class="footer-col">
@@ -464,33 +600,42 @@
                             <li><a href="faq.html">FAQ</a></li>
                             <li><a href="#">Support</a></li>
                             <li><a href="#">Privacy</a></li>
-                            <li><a href="#">Term & Conditions</a></li>
+                            <li><a href="#">Term & Coditions</a></li>
                         </ul>
                     </div>
                     <div class="footer-col">
                         <h4>Our Gallery</h4>
-                        <div class="footer-gallery"><a href="#"><img
-                                    src="https://images.unsplash.com/photo-1559839914-17aae19cec71?w=120&q=80"
-                                    alt="Gallery"></a><a href="#"><img
-                                    src="https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=120&q=80"
-                                    alt="Gallery"></a><a href="#"><img
-                                    src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=120&q=80"
-                                    alt="Gallery"></a><a href="#"><img
-                                    src="https://images.unsplash.com/photo-1523362628745-0c100150b504?w=120&q=80"
-                                    alt="Gallery"></a><a href="#"><img
-                                    src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=120&q=80"
-                                    alt="Gallery"></a><a href="#"><img
-                                    src="https://images.unsplash.com/photo-1559839914-17aae19cec71?w=120&q=80"
-                                    alt="Gallery"></a></div>
+                        <div class="footer-gallery">
+                            <a href="#"><img
+                                    src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=200&q=80"
+                                    alt="Gallery"></a>
+                            <a href="#"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=200&q=80"
+                                    alt="Gallery"></a>
+                            <a href="#"><img
+                                    src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=200&q=80"
+                                    alt="Gallery"></a>
+                            <a href="#"><img
+                                    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=200&q=80"
+                                    alt="Gallery"></a>
+                            <a href="#"><img
+                                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=80"
+                                    alt="Gallery"></a>
+                            <a href="#"><img
+                                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=200&q=80"
+                                    alt="Gallery"></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2025 Aquato All rights reserved.</p>
-                <div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Term & Conditions</a><a
-                        href="#">Legal</a></div>
+                <p>Copyright @ 2025 Aquato All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy</a>
+                    <a href="#">Term & Conditions</a>
+                    <a href="#">Legal</a>
+                </div>
             </div>
         </div>
     </footer>
