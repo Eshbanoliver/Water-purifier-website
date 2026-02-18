@@ -2020,10 +2020,13 @@ ul {
 .about-stat-icon::after {
     content: '';
     position: absolute;
-    inset: -6px;
+    top: 50%;
+    left: 50%;
+    width: calc(100% + 15px);
+    height: calc(100% + 15px);
     border-radius: 50%;
-    border: 2px dashed rgba(79, 70, 229, .25);
-    animation: rotate-slow 15s linear infinite
+    border: 2px dashed rgba(79, 70, 229, .3);
+    animation: rotate-slow 20s linear infinite
 }
 
 .about-stat-number {
