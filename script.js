@@ -24,14 +24,61 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // === Mobile Menu ===
     if (menuToggle) {
+        // Create backdrop element for mobile menu
+        const backdrop = document.createElement('div');
+        backdrop.className = 'nav-backdrop';
+        document.body.appendChild(backdrop);
+
+        function openMenu() {
+            nav.classList.add('open');
+            menuToggle.classList.add('active');
+            backdrop.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            nav.classList.remove('open');
+            menuToggle.classList.remove('active');
+            backdrop.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
         menuToggle.addEventListener('click', () => {
-            nav.classList.toggle('open');
-            menuToggle.classList.toggle('active');
+            if (nav.classList.contains('open')) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
         });
+
+        // Close menu when clicking backdrop
+        backdrop.addEventListener('click', closeMenu);
+
+        // Close menu when clicking a nav link
         document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => { nav.classList.remove('open'); menuToggle.classList.remove('active'); });
+            link.addEventListener('click', closeMenu);
         });
+
+        // Close menu on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && nav.classList.contains('open')) {
+                closeMenu();
+            }
+        });
+
+        // Also handle the hamburger-icon-wrapper click
+        const hamburgerWrapper = document.querySelector('.hamburger-icon-wrapper');
+        if (hamburgerWrapper) {
+            hamburgerWrapper.addEventListener('click', () => {
+                if (nav.classList.contains('open')) {
+                    closeMenu();
+                } else {
+                    openMenu();
+                }
+            });
+        }
     }
+
 
     // === Counter Animation ===
     let countersAnimated = false;

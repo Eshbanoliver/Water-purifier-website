@@ -366,9 +366,7 @@ ul {
     color: #6366f1
 }
 
-.menu-toggle {
-    display: none
-}
+/* menu-toggle visibility is controlled in the responsive section */
 
 /* ===== PAGE HERO BANNER ===== */
 .page-hero {
@@ -2442,17 +2440,105 @@ ul {
 }
 
 /* ===== RESPONSIVE ===== */
+
+/* --- Menu Toggle Button (hamburger icon for mobile) --- */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: 2px solid var(--border);
+    border-radius: 50%;
+    cursor: pointer;
+    gap: 5px;
+    padding: 10px;
+    z-index: 1001;
+    transition: var(--transition)
+}
+
+.menu-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--dark);
+    border-radius: 2px;
+    transition: var(--transition)
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px)
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px)
+}
+
+/* --- Mobile nav overlay backdrop --- */
+.nav-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 997;
+    opacity: 0;
+    transition: opacity .3s ease
+}
+
+.nav-backdrop.active {
+    display: block;
+    opacity: 1
+}
+
+/* ===== TABLET (max-width: 1024px) ===== */
 @media(max-width:1024px) {
+    .container {
+        padding: 0 24px
+    }
+
+    .hero {
+        height: auto;
+        min-height: 600px;
+        padding: 80px 0 120px
+    }
+
     .hero-title {
-        font-size: 3rem
+        font-size: 3.5rem
+    }
+
+    .hero-main-jug {
+        height: 400px
+    }
+
+    .hero-jug-secondary {
+        height: 280px;
+        right: -60px
     }
 
     .section-title {
         font-size: 2rem
     }
 
+    .about-main-title {
+        font-size: 2.5rem
+    }
+
     .features-grid {
         grid-template-columns: repeat(2, 1fr)
+    }
+
+    .about-grid {
+        gap: 50px
+    }
+
+    .about-main-img {
+        height: 450px
     }
 
     .pricing-grid {
@@ -2461,7 +2547,8 @@ ul {
     }
 
     .footer-grid {
-        grid-template-columns: repeat(2, 1fr)
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px
     }
 
     .about-detail-grid {
@@ -2484,24 +2571,87 @@ ul {
     .contact-grid {
         grid-template-columns: 1fr
     }
+
+    .experts-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .cta-container {
+        gap: 40px
+    }
+
+    .cta-image img {
+        width: 280px;
+        height: 280px
+    }
+
+    .stats-section {
+        padding: 80px 0
+    }
+
+    .about-section {
+        padding: 80px 0
+    }
+
+    .bottle-feature-section {
+        padding: 80px 0
+    }
 }
 
+/* ===== MOBILE (max-width: 768px) ===== */
 @media(max-width:768px) {
+
+    /* --- Top Bar: hide on mobile --- */
     .top-bar {
         display: none
     }
 
+    /* --- Header adjustments --- */
+    .header {
+        padding: 15px 0
+    }
+
+    .header.scrolled {
+        padding: 10px 0
+    }
+
+    .logo {
+        font-size: 1.8rem;
+        gap: 8px
+    }
+
+    .logo-icon {
+        font-size: 1.6rem
+    }
+
+    .hamburger-icon-wrapper {
+        display: none
+    }
+
+    /* --- Show the menu toggle button --- */
+    .menu-toggle {
+        display: flex
+    }
+
+    /* --- Mobile Navigation Drawer --- */
     .nav {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 280px;
+        width: 300px;
+        max-width: 85vw;
         height: 100vh;
+        height: 100dvh;
         background: var(--dark);
-        padding: 80px 30px 30px;
-        transition: var(--transition);
+        padding: 90px 30px 30px;
+        transition: right .35s cubic-bezier(.4, 0, .2, 1);
         z-index: 998;
-        box-shadow: -10px 0 40px rgba(0, 0, 0, .3)
+        box-shadow: -10px 0 40px rgba(0, 0, 0, .3);
+        overflow-y: auto
     }
 
     .nav.open {
@@ -2513,72 +2663,182 @@ ul {
         gap: 0
     }
 
+    .nav-list li {
+        width: 100%
+    }
+
     .nav-link {
         display: block;
-        padding: 14px 0;
-        border-bottom: 1px solid rgba(255, 255, 255, .05);
-        width: 100%
+        padding: 16px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, .08);
+        width: 100%;
+        color: rgba(255, 255, 255, .85);
+        font-size: 1.05rem
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        color: #818cf8
     }
 
     .nav-dot {
         display: none
     }
 
-    .menu-toggle {
-        display: flex
-    }
-
-    .hamburger-btn {
-        display: none
+    /* --- Hero Section --- */
+    .hero {
+        height: auto;
+        min-height: auto;
+        padding: 60px 0 100px
     }
 
     .hero-container {
         grid-template-columns: 1fr;
-        text-align: center
+        text-align: center;
+        gap: 30px
+    }
+
+    .hero-content {
+        order: 2
+    }
+
+    .hero-jug-showcase {
+        order: 1
     }
 
     .hero-title {
-        font-size: 2.5rem
+        font-size: 2.5rem;
+        margin-bottom: 20px
+    }
+
+    .hero-subtitle-banner {
+        font-size: .8rem;
+        padding: 8px 18px;
+        margin-bottom: 18px
     }
 
     .hero-desc {
-        margin: 0 auto 30px
+        font-size: 1rem;
+        margin: 0 auto 30px;
+        max-width: 100%
+    }
+
+    .hero-main-jug {
+        height: 300px
+    }
+
+    .hero-jug-secondary {
+        height: 200px;
+        right: -30px;
+        bottom: 30px
+    }
+
+    .hero-slant-bottom {
+        height: 60px
     }
 
     .hero-btns {
         justify-content: center
     }
 
-    .hero-image {
-        order: -1
+    .btn-hero {
+        padding: 16px 30px;
+        font-size: .95rem
     }
 
-    .hero-bottle {
-        max-height: 300px
+    /* --- Section spacing --- */
+    .about-section,
+    .bottle-feature-section,
+    .pricing-section,
+    .testimonials-section,
+    .experts-section,
+    .blog-section,
+    .cta-section,
+    .about-detail-section,
+    .team-section,
+    .faq-section,
+    .contact-section {
+        padding: 60px 0
+    }
+
+    .section-header {
+        margin-bottom: 40px
+    }
+
+    .section-title {
+        font-size: 1.8rem
+    }
+
+    .section-desc {
+        font-size: .9rem
+    }
+
+    /* --- Features Strip --- */
+    .features-strip {
+        padding: 30px 0
     }
 
     .features-grid {
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
+        gap: 16px
     }
 
-    .about-grid,
-    .story-grid {
-        grid-template-columns: 1fr
+    .feature-item {
+        padding: 16px
     }
 
-    .about-image img {
-        height: 300px
+    /* --- About Section --- */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px
+    }
+
+    .about-image-column {
+        padding-left: 0
+    }
+
+    .about-decor-bars {
+        display: none
+    }
+
+    .about-main-img {
+        height: 350px
+    }
+
+    .about-exp-badge {
+        width: 130px;
+        height: 130px;
+        top: -15px;
+        left: -10px
+    }
+
+    .exp-num {
+        font-size: 3.5rem
+    }
+
+    .about-main-title {
+        font-size: 2.2rem
+    }
+
+    /* --- Stats --- */
+    .stats-section {
+        padding: 60px 0
     }
 
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 30px
+        gap: 20px
     }
 
     .stat-item::after {
         display: none
     }
 
+    .stat-number {
+        font-size: 3rem
+    }
+
+    /* --- Pricing --- */
     .pricing-grid {
         grid-template-columns: 1fr;
         max-width: 400px;
@@ -2589,26 +2849,65 @@ ul {
         transform: none
     }
 
+    .pricing-card.featured:hover {
+        transform: translateY(-8px)
+    }
+
+    /* --- Testimonials --- */
     .testimonials-grid {
         grid-template-columns: 1fr
     }
 
-    .experts-grid {
-        grid-template-columns: 1fr 1fr
+    .testimonial-card {
+        padding: 30px
     }
 
+    /* --- Experts --- */
+    .experts-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px
+    }
+
+    .expert-image {
+        height: 280px
+    }
+
+    /* --- Blog --- */
     .blog-grid {
         grid-template-columns: 1fr
     }
 
+    /* --- CTA Section --- */
     .cta-bg {
         width: 100%;
-        height: 300px;
+        height: 250px;
         border-radius: 0 0 40px 40px
     }
 
     .cta-container {
         grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px
+    }
+
+    .cta-image img {
+        width: 250px;
+        height: 250px
+    }
+
+    .cta-content {
+        padding: 0
+    }
+
+    .cta-content .section-title {
+        text-align: center !important
+    }
+
+    .cta-content .decor-dots {
+        justify-content: center
+    }
+
+    .cta-desc {
         text-align: center
     }
 
@@ -2616,42 +2915,62 @@ ul {
         grid-template-columns: 1fr
     }
 
-    .footer-grid {
-        grid-template-columns: 1fr
+    /* --- How We Work / Blue Wave --- */
+    .howwework-bg {
+        height: 350px
     }
 
-    .footer-bottom .container {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center
+    .blue-wave-section {
+        padding: 60px 0
     }
 
-    .about-list {
-        grid-template-columns: 1fr
+    /* --- Video Section --- */
+    .video-section-img {
+        height: 280px
     }
 
-    .story-features {
-        flex-wrap: wrap
-    }
-
+    /* --- About Detail Page --- */
     .about-detail-grid {
         grid-template-columns: 1fr
     }
 
     .about-img-main {
-        width: 90%;
-        height: 350px
+        width: 85%;
+        height: 300px
     }
 
     .about-img-overlay {
-        width: 50%;
-        height: 200px;
-        right: 0
+        width: 55%;
+        height: 180px;
+        right: 0;
+        bottom: -20px
+    }
+
+    .about-detail-title {
+        font-size: 2rem
+    }
+
+    /* --- About Stats --- */
+    .about-stats-section {
+        padding: 60px 0
     }
 
     .about-stats-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px
+        gap: 16px
+    }
+
+    .about-stat-item {
+        padding: 30px 16px
+    }
+
+    .about-stat-number {
+        font-size: 2.2rem
+    }
+
+    /* --- Team --- */
+    .team-section {
+        padding: 60px 0
     }
 
     .team-grid {
@@ -2660,66 +2979,512 @@ ul {
     }
 
     .team-image {
-        height: 250px
+        height: 220px
     }
 
+    /* --- Page Hero --- */
     .page-hero {
-        padding: 80px 0 60px
+        padding: 70px 0 50px
     }
 
     .page-hero-title {
-        font-size: 2.2rem
-    }
-
-    .services-cards-grid {
-        grid-template-columns: 1fr 1fr
-    }
-}
-
-@media(max-width:480px) {
-    .hero-title {
         font-size: 2rem
     }
 
-    .section-title {
-        font-size: 1.6rem
+    /* --- Services Cards --- */
+    .services-cards-grid {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .service-card {
+        padding: 30px 20px
+    }
+
+    /* --- FAQ --- */
+    .faq-section {
+        padding: 60px 0
+    }
+
+    .faq-question {
+        padding: 16px 20px
+    }
+
+    .faq-question h4 {
+        font-size: .9rem
+    }
+
+    .faq-answer-inner {
+        padding: 0 20px 16px;
+        font-size: .85rem
+    }
+
+    /* --- Contact --- */
+    .contact-sidebar {
+        padding: 30px 24px
+    }
+
+    .contact-form-title {
+        font-size: 1.8rem
+    }
+
+    /* --- Footer --- */
+    .footer {
+        padding-top: 60px
+    }
+
+    .footer-main {
+        padding: 0 0 50px
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px
+    }
+
+    .footer-about p {
+        max-width: 100%
+    }
+
+    .footer-col h4 {
+        font-size: 1.2rem;
+        margin-bottom: 20px
+    }
+
+    .footer-gallery {
+        gap: 10px
+    }
+
+    .footer-gallery img {
+        height: 70px
+    }
+
+    .footer-bottom {
+        padding: 20px 0
+    }
+
+    .footer-bottom .container {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center
+    }
+
+    .footer-bottom p {
+        font-size: .9rem
+    }
+
+    .footer-bottom-links {
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center
+    }
+
+    .footer-bottom-links a {
+        font-size: .9rem
+    }
+
+    /* --- Clients Section --- */
+    .clients-grid {
+        gap: 30px
+    }
+
+    .client-logo {
+        font-size: 1.1rem
+    }
+
+    /* --- Scroll to top --- */
+    .scroll-top {
+        bottom: 20px;
+        right: 20px;
+        width: 44px;
+        height: 44px;
+        font-size: 1rem
+    }
+
+    /* --- Buttons --- */
+    .btn {
+        padding: 12px 26px;
+        font-size: .9rem
+    }
+
+    /* Story section */
+    .story-features {
+        flex-wrap: wrap
+    }
+
+    .about-list {
+        grid-template-columns: 1fr
+    }
+}
+
+/* ===== SMALL MOBILE (max-width: 480px) ===== */
+@media(max-width:480px) {
+    .container {
+        padding: 0 16px
+    }
+
+    /* --- Hero --- */
+    .hero {
+        padding: 40px 0 80px
+    }
+
+    .hero-title {
+        font-size: 2rem;
+        line-height: 1.05
+    }
+
+    .hero-subtitle-banner {
+        font-size: .7rem;
+        padding: 6px 14px;
+        letter-spacing: .5px
+    }
+
+    .hero-desc {
+        font-size: .9rem;
+        margin-bottom: 24px
+    }
+
+    .hero-main-jug {
+        height: 220px
+    }
+
+    .hero-jug-secondary {
+        height: 160px;
+        right: -20px;
+        bottom: 20px
     }
 
     .hero-btns {
         flex-direction: column;
-        align-items: center
+        align-items: center;
+        gap: 12px
     }
 
+    .btn-hero {
+        padding: 14px 24px;
+        font-size: .85rem;
+        width: 100%;
+        text-align: center
+    }
+
+    .hero-slant-bottom {
+        height: 40px
+    }
+
+    /* --- Typography --- */
+    .section-title {
+        font-size: 1.5rem
+    }
+
+    .section-subtitle {
+        font-size: .82rem
+    }
+
+    .about-main-title {
+        font-size: 1.8rem
+    }
+
+    .about-detail-title {
+        font-size: 1.6rem
+    }
+
+    .contact-form-title {
+        font-size: 1.5rem
+    }
+
+    .page-hero-title {
+        font-size: 1.6rem
+    }
+
+    .page-hero {
+        padding: 60px 0 40px
+    }
+
+    /* --- About Section --- */
+    .about-exp-badge {
+        width: 110px;
+        height: 110px
+    }
+
+    .exp-num {
+        font-size: 3rem
+    }
+
+    .about-main-img {
+        height: 280px
+    }
+
+    /* --- Stats --- */
     .stats-grid {
-        grid-template-columns: 1fr 1fr
+        grid-template-columns: 1fr 1fr;
+        gap: 16px
     }
 
     .stat-number {
         font-size: 2.2rem
     }
 
+    .stat-label {
+        font-size: .85rem
+    }
+
+    .stat-plus {
+        font-size: 1.8rem
+    }
+
+    /* --- Experts --- */
     .experts-grid {
         grid-template-columns: 1fr
     }
 
-    .testimonial-card {
-        padding: 24px
+    .expert-image {
+        height: 250px
     }
 
+    /* --- Team --- */
     .team-grid {
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
+        gap: 20px
     }
 
+    .team-image {
+        height: 260px
+    }
+
+    /* --- Services --- */
     .services-cards-grid {
         grid-template-columns: 1fr
     }
 
+    .service-card {
+        padding: 28px 18px
+    }
+
+    .service-card-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem
+    }
+
+    /* --- About Detail --- */
+    .about-img-main {
+        width: 100%;
+        height: 250px
+    }
+
+    .about-img-overlay {
+        width: 55%;
+        height: 150px;
+        right: 0
+    }
+
     .about-experience-badge {
-        width: 90px;
-        height: 90px
+        width: 85px;
+        height: 85px;
+        top: -12px;
+        left: -8px
     }
 
     .exp-number {
+        font-size: 1.6rem
+    }
+
+    .exp-text {
+        font-size: .6rem
+    }
+
+    .about-stat-item {
+        padding: 24px 12px
+    }
+
+    .about-stat-number {
         font-size: 1.8rem
+    }
+
+    .about-stat-label {
+        font-size: .8rem
+    }
+
+    /* --- Testimonials --- */
+    .testimonial-card {
+        padding: 24px 18px
+    }
+
+    .testimonial-heading {
+        font-size: 1.1rem
+    }
+
+    .testimonial-text {
+        font-size: .88rem
+    }
+
+    .testimonial-author img {
+        width: 44px;
+        height: 44px
+    }
+
+    /* --- Pricing --- */
+    .pricing-card {
+        padding: 30px 24px
+    }
+
+    .pricing-price .amount {
+        font-size: 3rem
+    }
+
+    /* --- Blog --- */
+    .blog-image {
+        height: 180px
+    }
+
+    .blog-content {
+        padding: 18px
+    }
+
+    .blog-content h3 {
+        font-size: 1rem
+    }
+
+    /* --- CTA --- */
+    .cta-bg {
+        height: 200px;
+        border-radius: 0 0 30px 30px
+    }
+
+    .cta-image img {
+        width: 200px;
+        height: 200px
+    }
+
+    .cta-image-circle {
+        width: 220px;
+        height: 220px
+    }
+
+    /* --- FAQ --- */
+    .faq-question {
+        padding: 14px 16px
+    }
+
+    .faq-question h4 {
+        font-size: .85rem
+    }
+
+    .faq-toggle {
+        width: 30px;
+        height: 30px;
+        font-size: .75rem
+    }
+
+    /* --- Contact --- */
+    .contact-sidebar {
+        padding: 24px 20px
+    }
+
+    .contact-info-item {
+        margin-bottom: 28px
+    }
+
+    .contact-info-icon {
+        width: 42px;
+        height: 42px;
+        font-size: .95rem
+    }
+
+    .contact-info-item h4 {
+        font-size: .95rem
+    }
+
+    .contact-info-item p {
+        font-size: .82rem
+    }
+
+    /* --- Footer --- */
+    .footer {
+        padding-top: 40px
+    }
+
+    .footer-logo {
+        font-size: 1.6rem
+    }
+
+    .footer-logo i {
+        font-size: 1.8rem
+    }
+
+    .footer-about p {
+        font-size: .88rem
+    }
+
+    .footer-col h4 {
+        font-size: 1.1rem;
+        margin-bottom: 16px
+    }
+
+    .footer-col ul li {
+        margin-bottom: 14px
+    }
+
+    .footer-col ul li a {
+        font-size: .9rem
+    }
+
+    .footer-gallery img {
+        height: 60px;
+        border-radius: 8px
+    }
+
+    .footer-bottom-links a {
+        font-size: .82rem
+    }
+
+    .footer-bottom p {
+        font-size: .82rem
+    }
+
+    /* --- Video section --- */
+    .video-section-img {
+        height: 200px
+    }
+
+    .play-btn {
+        width: 60px;
+        height: 60px;
+        font-size: 1.2rem
+    }
+
+    /* --- Clients --- */
+    .clients-grid {
+        gap: 20px
+    }
+
+    .client-logo {
+        font-size: .95rem
+    }
+
+    /* --- Buttons --- */
+    .btn {
+        padding: 11px 22px;
+        font-size: .85rem
+    }
+
+    /* --- Nav drawer --- */
+    .nav {
+        width: 260px;
+        padding: 80px 24px 24px
+    }
+
+    .nav-link {
+        font-size: .95rem;
+        padding: 14px 0
+    }
+
+    /* Blue wave section */
+    .blue-wave-section {
+        padding: 50px 0
+    }
+
+    /* Howwework */
+    .howwework-bg {
+        height: 280px
     }
 }
