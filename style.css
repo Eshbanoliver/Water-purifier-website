@@ -1683,13 +1683,13 @@ ul {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     text-decoration: none
 }
 
 .footer-logo-img {
-    height: 100px;
-    /* Also increased footer logo for consistency */
+    height: 160px;
+    /* Enlarge logo size */
     width: auto;
     object-fit: contain;
     display: block;
