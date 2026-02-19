@@ -270,7 +270,8 @@ ul {
 /* ===== HEADER / NAVIGATION ===== */
 .header {
     background: var(--white);
-    padding: 25px 0;
+    padding: 0;
+    /* Removed padding to allow for a larger logo */
     position: relative;
     z-index: 1000;
     border-bottom: 1px dashed rgba(0, 0, 0, .1)
@@ -284,7 +285,7 @@ ul {
     background: rgba(255, 255, 255, .98);
     backdrop-filter: blur(12px);
     box-shadow: 0 4px 30px rgba(0, 0, 0, .05);
-    padding: 15px 0
+    padding: 0
 }
 
 .header .container {
@@ -301,10 +302,13 @@ ul {
 }
 
 .logo-img {
-    height: 80px;
+    height: 130px;
+    /* Increased from 80px */
     width: auto;
     object-fit: contain;
-    display: block
+    display: block;
+    margin: -10px 0;
+    /* Use negative margin to keep header height compact */
 }
 
 .nav-list {
@@ -1682,7 +1686,8 @@ ul {
 }
 
 .footer-logo-img {
-    height: 70px;
+    height: 100px;
+    /* Also increased footer logo for consistency */
     width: auto;
     object-fit: contain;
     display: block;
