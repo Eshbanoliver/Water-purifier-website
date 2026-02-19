@@ -1648,8 +1648,7 @@ ul {
 /* ===== FOOTER ===== */
 .footer {
     position: relative;
-    background: #0f172a;
-    /* Exact navy dark background */
+    background: #0f172a url('assets/footer-bg.png') center/cover no-repeat;
     color: var(--white);
     padding-top: 60px;
     overflow: hidden;
