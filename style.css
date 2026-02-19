@@ -2654,6 +2654,11 @@ ul {
 .mission-card {
     background: linear-gradient(135deg, var(--white) 0%, #f5f7ff 100%);
     border-left: 6px solid var(--primary);
+    box-shadow: 0 20px 40px rgba(79, 70, 229, 0.3);
+}
+
+.mission-card:hover {
+    box-shadow: 0 30px 60px rgba(79, 70, 229, 0.45);
 }
 
 .mission-card i {
@@ -2667,6 +2672,11 @@ ul {
 .vision-card {
     background: linear-gradient(135deg, var(--white) 0%, #f0fff4 100%);
     border-left: 6px solid #10b981;
+    box-shadow: 0 20px 40px rgba(16, 185, 129, 0.3);
+}
+
+.vision-card:hover {
+    box-shadow: 0 30px 60px rgba(16, 185, 129, 0.45);
 }
 
 .vision-card .mv-icon-box {
