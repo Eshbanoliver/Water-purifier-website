@@ -297,15 +297,14 @@ ul {
     display: flex;
     align-items: center;
     gap: 12px;
-    font-size: 2.5rem;
-    font-weight: 900;
-    color: var(--dark);
-    text-transform: none
+    text-decoration: none
 }
 
-.logo-icon {
-    font-size: 2.2rem;
-    color: #6366f1
+.logo-img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    display: block
 }
 
 .nav-list {
@@ -1646,7 +1645,7 @@ ul {
     background: #0f172a;
     /* Exact navy dark background */
     color: var(--white);
-    padding-top: 100px;
+    padding-top: 60px;
     overflow: hidden
 }
 
@@ -1663,7 +1662,7 @@ ul {
 }
 
 .footer-main {
-    padding: 0 0 80px;
+    padding: 0 0 40px;
     position: relative;
     z-index: 2
 }
@@ -1678,23 +1677,24 @@ ul {
     display: flex;
     align-items: center;
     gap: 12px;
-    font-size: 2.2rem;
-    font-weight: 800;
-    color: var(--white);
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     text-decoration: none
 }
 
-.footer-logo i {
-    color: #6366f1;
-    font-size: 2.5rem
+.footer-logo-img {
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    filter: brightness(0) invert(1);
+    /* Make it white for dark footer */
 }
 
 .footer-about p {
     color: rgba(255, 255, 255, .6);
     font-size: 1rem;
     line-height: 1.8;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     max-width: 350px
 }
 
@@ -1726,7 +1726,7 @@ ul {
     font-size: 1.4rem;
     font-weight: 800;
     color: var(--white);
-    margin-bottom: 35px;
+    margin-bottom: 25px;
     position: relative;
     padding-bottom: 12px
 }
@@ -1778,9 +1778,20 @@ ul {
     transition: var(--transition)
 }
 
-.footer-gallery a:hover img {
-    transform: scale(1.05);
-    opacity: .8
+.footer-map {
+    width: 100%;
+    line-height: 0;
+    transition: var(--transition);
+}
+
+.footer-map iframe {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+}
+
+.footer-map:hover iframe {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
 }
 
 .footer-bottom {
