@@ -50,7 +50,3 @@ A high-performance, modern, and responsive multi-page website template designed 
    - Update the logo in `assets/logo.png`.
    - Modify contact details in the top bar and footer sections across all HTML files.
    - Adjust the Google Maps embed link in `contact.html` and the footer.
-
-## 📄 License
-
-This project is open-source and available under the MIT License.
