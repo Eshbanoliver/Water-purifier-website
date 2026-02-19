@@ -1540,7 +1540,8 @@ ul {
     padding: 100px 0 20px;
     position: relative;
     overflow: hidden;
-    background: var(--bg-light)
+    background: var(--bg-light);
+    margin-top: 80px;
 }
 
 .cta-bg {
@@ -1651,7 +1652,8 @@ ul {
     /* Exact navy dark background */
     color: var(--white);
     padding-top: 60px;
-    overflow: hidden
+    overflow: hidden;
+    margin-top: 80px;
 }
 
 .footer::before {
