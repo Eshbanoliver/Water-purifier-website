@@ -355,7 +355,7 @@ ul {
     height: 55px;
     border: 2px solid #e2e8f0;
     border-radius: 50%;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     color: var(--dark);
@@ -3033,6 +3033,10 @@ ul {
     .bottle-feature-section {
         padding: 80px 0
     }
+
+    .hamburger-icon-wrapper {
+        display: flex;
+    }
 }
 
 /* ===== MOBILE (max-width: 768px) ===== */
@@ -3062,12 +3066,12 @@ ul {
     }
 
     .hamburger-icon-wrapper {
-        display: none
+        display: flex
     }
 
     /* --- Show the menu toggle button --- */
     .menu-toggle {
-        display: flex
+        display: none
     }
 
     /* --- Mobile Navigation Drawer --- */
