@@ -586,14 +586,14 @@ ul {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 30px;
-    max-width: 1200px;
+    gap: 25px;
+    max-width: 1160px;
     margin: 0 auto;
 }
 
 .brand-card {
-    width: 150px;
-    height: 80px;
+    width: 165px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -601,12 +601,16 @@ ul {
     filter: grayscale(0%);
     opacity: 1;
     background: var(--white);
-    padding: 10px;
-    border-radius: 8px;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(79, 70, 229, 0.18);
+    border: 1px solid rgba(79, 70, 229, 0.15);
 }
 
 .brand-card:hover {
-    transform: translateY(-5px) scale(1.05);
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(79, 70, 229, 0.3);
+    border-color: var(--primary-light);
 }
 
 .brand-card img {
@@ -615,14 +619,17 @@ ul {
     object-fit: contain;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
     .brands-grid {
-        gap: 30px;
+        gap: 20px;
     }
+}
 
+@media (max-width: 992px) {
     .brand-card {
-        width: 130px;
-        height: 75px;
+        width: 140px;
+        height: 90px;
+        padding: 15px;
     }
 }
 
