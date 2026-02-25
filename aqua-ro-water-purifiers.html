@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aqua RO Water Purifiers – High TDS Reduction | Shantiraj Associates Jaipur</title>
+    <title>Aqua RO Water Purifiers – Best Price in Jaipur | Shantiraj Associates</title>
     <meta name="description"
-        content="Buy Aqua RO water purifiers at Shantiraj Associates, Jaipur. Trusted Aqua-brand RO systems with high TDS reduction.">
+        content="Buy Aqua RO water purifiers at best prices. Aqua Swift & Aqua-S Transparent with RO+UV+UF+TDS Adjuster+Copper. Free installation in Jaipur.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
@@ -15,6 +15,193 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="assets/logo.png">
     <meta name="theme-color" content="#4f46e5">
+    <style>
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 28px;
+            padding: 20px 0
+        }
+
+        .product-card-item {
+            background: #fff;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(79, 70, 229, .08);
+            transition: all .4s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column
+        }
+
+        .product-card-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(79, 70, 229, .18)
+        }
+
+        .product-card-item .product-img {
+            width: 100%;
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f0f4ff 0%, #e8eeff 100%);
+            padding: 20px;
+            position: relative;
+            overflow: hidden
+        }
+
+        .product-card-item .product-img img {
+            max-height: 180px;
+            max-width: 90%;
+            object-fit: contain;
+            transition: transform .4s ease
+        }
+
+        .product-card-item:hover .product-img img {
+            transform: scale(1.08)
+        }
+
+        .product-card-item .product-body {
+            padding: 20px 22px 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1
+        }
+
+        .product-card-item .product-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--heading);
+            margin-bottom: 6px;
+            line-height: 1.3
+        }
+
+        .product-card-item .product-desc {
+            font-size: .82rem;
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 14px;
+            flex-grow: 1;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden
+        }
+
+        .product-card-item .product-price {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+            flex-wrap: wrap
+        }
+
+        .product-card-item .price-current {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--primary)
+        }
+
+        .product-card-item .price-original {
+            font-size: .9rem;
+            color: #999;
+            text-decoration: line-through
+        }
+
+        .product-card-item .price-tag {
+            font-size: .7rem;
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: #fff;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-weight: 600
+        }
+
+        .product-card-item .product-specs {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 18px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px
+        }
+
+        .product-card-item .product-specs li {
+            font-size: .72rem;
+            background: #f0f4ff;
+            color: var(--primary);
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-weight: 500
+        }
+
+        .product-card-item .product-warranty {
+            font-size: .75rem;
+            color: #16a34a;
+            font-weight: 600;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 6px
+        }
+
+        .product-card-item .product-warranty i {
+            font-size: .85rem
+        }
+
+        .product-card-item .enquire-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 20px;
+            background: #25D366;
+            color: #fff;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: .9rem;
+            text-decoration: none;
+            transition: all .3s ease;
+            border: none;
+            cursor: pointer
+        }
+
+        .product-card-item .enquire-btn:hover {
+            background: #128C7E;
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, .3)
+        }
+
+        .product-card-item .enquire-btn i {
+            font-size: 1.1rem
+        }
+
+        @media(max-width:1024px) {
+            .products-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 22px
+            }
+        }
+
+        @media(max-width:768px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px
+            }
+
+            .product-card-item .product-img {
+                height: 180px
+            }
+        }
+
+        @media(max-width:480px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 16px
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -50,6 +237,7 @@
             </div>
         </div>
     </header>
+
     <section class="page-hero">
         <div class="page-hero-overlay"></div>
         <div class="container page-hero-content">
@@ -58,49 +246,73 @@
                     class="breadcrumb-active">Aqua RO Water Purifiers</span></div>
         </div>
     </section>
+
     <section class="product-alternating-section">
         <div class="container">
             <div class="section-header">
-                <p class="section-subtitle">Trusted Brand</p>
+                <p class="section-subtitle">Trusted Purification</p>
                 <h2 class="section-title">Aqua RO Water Purifiers</h2>
                 <div class="section-line"></div>
-                <p class="section-desc">Aqua RO water purifiers are trusted by thousands of households for their
-                    reliable purification and high TDS reduction. Engineered for Indian water conditions, they deliver
-                    crystal-clear, safe drinking water consistently.</p>
+                <p class="section-desc">Aqua RO water purifiers deliver reliable, high-performance purification at
+                    affordable prices. Explore our Aqua RO range with free installation and warranty in Jaipur.</p>
             </div>
-            <div class="product-card-alt animate-on-scroll">
-                <div class="product-card-img"><img src="assets/kent-dealer.jpg" alt="Aqua RO Water Purifier"></div>
-                <div class="product-card-content">
-                    <h3>Powerful TDS Reduction</h3>
-                    <p>Designed to handle high-TDS water common in Jaipur and Rajasthan. High-rejection RO membranes and
-                        efficient pre-filtration reduce TDS levels dramatically while maintaining optimal mineral
-                        balance.</p>
-                    <ul class="product-highlights">
-                        <li><i class="fas fa-check"></i> Handles TDS up to 2000+ ppm</li>
-                        <li><i class="fas fa-check"></i> Multi-stage purification process</li>
-                        <li><i class="fas fa-check"></i> Robust build for Indian conditions</li>
-                        <li><i class="fas fa-check"></i> Large storage capacity</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary">Get Best Price</a>
+
+            <div class="products-grid">
+
+                <!-- 1. Aqua Swift -->
+                <div class="product-card-item animate-on-scroll">
+                    <div class="product-img"><img src="assets/kent-pearl.jpg" alt="Aqua Swift"></div>
+                    <div class="product-body">
+                        <h3 class="product-name">Aqua Swift</h3>
+                        <p class="product-desc">Suitable for purification of Brackish/Tap Water/Municipal Corporation
+                            Water. ABS food-grade body with wall mount or counter-top installation and 8L storage.</p>
+                        <div class="product-price">
+                            <span class="price-current">₹5,990</span>
+                            <span class="price-original">₹10,450</span>
+                            <span class="price-tag">43% OFF</span>
+                        </div>
+                        <ul class="product-specs">
+                            <li>12-15 L/hr</li>
+                            <li>8L Tank</li>
+                            <li>60W</li>
+                            <li>ABS Plastic</li>
+                            <li>Wall/Counter</li>
+                        </ul>
+                        <div class="product-warranty"><i class="fas fa-shield-alt"></i> 1 Year Warranty</div>
+                        <a href="https://wa.me/9314522756?text=Hi, I'm interested in Aqua Swift (₹5,990). Please share more details."
+                            class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a>
+                    </div>
                 </div>
-            </div>
-            <div class="product-card-alt animate-on-scroll">
-                <div class="product-card-content">
-                    <h3>Reliable Daily Performance</h3>
-                    <p>Built to run 24/7 in demanding conditions with heavy-duty pumps, durable fittings, and quality
-                        components that ensure years of trouble-free operation.</p>
-                    <ul class="product-highlights">
-                        <li><i class="fas fa-check"></i> Heavy-duty booster pump</li>
-                        <li><i class="fas fa-check"></i> Auto shut-off & overflow protection</li>
-                        <li><i class="fas fa-check"></i> Leak-proof fittings</li>
-                        <li><i class="fas fa-check"></i> Affordable spare parts</li>
-                        <li><i class="fas fa-check"></i> Expert installation included</li>
-                    </ul>
+
+                <!-- 2. Aqua-S Transparent -->
+                <div class="product-card-item animate-on-scroll">
+                    <div class="product-img"><img src="assets/kent-superb.jpg" alt="Aqua-S Transparent"></div>
+                    <div class="product-body">
+                        <h3 class="product-name">Aqua-S Transparent</h3>
+                        <p class="product-desc">Transparent-body RO+UV+UF purifier with TDS Adjuster and Copper
+                            enrichment. 90% TDS reduction, 15 L/hr production, and spacious 10L storage capacity.</p>
+                        <div class="product-price">
+                            <span class="price-current">Call for Price</span>
+                        </div>
+                        <ul class="product-specs">
+                            <li>15 L/hr</li>
+                            <li>10L Tank</li>
+                            <li>30W</li>
+                            <li>RO+UV+UF</li>
+                            <li>TDS Adjuster</li>
+                            <li>Copper</li>
+                        </ul>
+                        <div class="product-warranty"><i class="fas fa-shield-alt"></i> 1 Year Warranty</div>
+                        <a href="https://wa.me/9314522756?text=Hi, I'm interested in Aqua-S Transparent water purifier. Please share price and details."
+                            class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a>
+                    </div>
                 </div>
-                <div class="product-card-img"><img src="assets/kent-supreme.png" alt="Aqua RO Features"></div>
+
             </div>
         </div>
     </section>
+
+    <!-- CTA Section -->
     <section class="blue-wave-section">
         <div class="blue-wave-top"><svg viewBox="0 0 1440 120" fill="none">
                 <path
@@ -108,17 +320,19 @@
                     fill="#ffffff" />
             </svg></div>
         <div class="container" style="position:relative;z-index:2;padding-top:40px">
-            <h2 class="section-title" style="color:#fff">Order Your Aqua RO Purifier</h2>
+            <h2 class="section-title" style="color:#fff">Get an Aqua RO Purifier</h2>
             <div class="decor-dots center" style="justify-content:center;margin-bottom:24px"><span
                     style="background:#fff"></span><span style="background:rgba(255,255,255,.7)"></span><span
                     style="background:rgba(255,255,255,.5)"></span></div>
-            <p class="section-desc" style="color:rgba(255,255,255,.8);max-width:700px;margin:0 auto 30px">Trusted by
-                thousands of Jaipur families. Get the best price with free installation!</p>
+            <p class="section-desc" style="color:rgba(255,255,255,.8);max-width:700px;margin:0 auto 30px">Best prices on
+                Aqua RO water purifiers in Jaipur. Free delivery, professional installation, and 1 year warranty
+                included!</p>
             <a href="tel:9309080706" class="btn"
                 style="background:#fff;color:var(--primary);font-weight:700;border:none;box-shadow:var(--shadow)">Call
                 9309080706</a>
         </div>
     </section>
+
     <footer class="footer">
         <div class="footer-main">
             <div class="container">

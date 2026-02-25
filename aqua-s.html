@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aqua S Water Purifiers – Affordable RO Technology | Shantiraj Associates Jaipur</title>
+    <title>Aqua S Water Purifiers – Affordable RO in Jaipur | Shantiraj Associates</title>
     <meta name="description"
-        content="Buy Aqua S water purifiers at Shantiraj Associates, Jaipur. Affordable yet powerful RO purifiers combining advanced technology with budget-friendly pricing.">
+        content="Buy Aqua S water purifiers at best prices. Aqua-S & Aqua-S Transparent with RO+UV+UF+TDS Adjuster+Copper. Free installation in Jaipur.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
@@ -15,6 +15,193 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="assets/logo.png">
     <meta name="theme-color" content="#4f46e5">
+    <style>
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 28px;
+            padding: 20px 0
+        }
+
+        .product-card-item {
+            background: #fff;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(79, 70, 229, .08);
+            transition: all .4s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column
+        }
+
+        .product-card-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(79, 70, 229, .18)
+        }
+
+        .product-card-item .product-img {
+            width: 100%;
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f0f4ff 0%, #e8eeff 100%);
+            padding: 20px;
+            position: relative;
+            overflow: hidden
+        }
+
+        .product-card-item .product-img img {
+            max-height: 180px;
+            max-width: 90%;
+            object-fit: contain;
+            transition: transform .4s ease
+        }
+
+        .product-card-item:hover .product-img img {
+            transform: scale(1.08)
+        }
+
+        .product-card-item .product-body {
+            padding: 20px 22px 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1
+        }
+
+        .product-card-item .product-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--heading);
+            margin-bottom: 6px;
+            line-height: 1.3
+        }
+
+        .product-card-item .product-desc {
+            font-size: .82rem;
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 14px;
+            flex-grow: 1;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden
+        }
+
+        .product-card-item .product-price {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+            flex-wrap: wrap
+        }
+
+        .product-card-item .price-current {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--primary)
+        }
+
+        .product-card-item .price-original {
+            font-size: .9rem;
+            color: #999;
+            text-decoration: line-through
+        }
+
+        .product-card-item .price-tag {
+            font-size: .7rem;
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: #fff;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-weight: 600
+        }
+
+        .product-card-item .product-specs {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 18px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px
+        }
+
+        .product-card-item .product-specs li {
+            font-size: .72rem;
+            background: #f0f4ff;
+            color: var(--primary);
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-weight: 500
+        }
+
+        .product-card-item .product-warranty {
+            font-size: .75rem;
+            color: #16a34a;
+            font-weight: 600;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 6px
+        }
+
+        .product-card-item .product-warranty i {
+            font-size: .85rem
+        }
+
+        .product-card-item .enquire-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 20px;
+            background: #25D366;
+            color: #fff;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: .9rem;
+            text-decoration: none;
+            transition: all .3s ease;
+            border: none;
+            cursor: pointer
+        }
+
+        .product-card-item .enquire-btn:hover {
+            background: #128C7E;
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, .3)
+        }
+
+        .product-card-item .enquire-btn i {
+            font-size: 1.1rem
+        }
+
+        @media(max-width:1024px) {
+            .products-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 22px
+            }
+        }
+
+        @media(max-width:768px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px
+            }
+
+            .product-card-item .product-img {
+                height: 180px
+            }
+        }
+
+        @media(max-width:480px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 16px
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -54,7 +241,7 @@
     <section class="page-hero">
         <div class="page-hero-overlay"></div>
         <div class="container page-hero-content">
-            <h1 class="page-hero-title">Aqua S Water Purifiers</h1>
+            <h1 class="page-hero-title">Aqua S</h1>
             <div class="page-hero-breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">|</span><span
                     class="breadcrumb-active">Aqua S</span></div>
         </div>
@@ -63,48 +250,67 @@
     <section class="product-alternating-section">
         <div class="container">
             <div class="section-header">
-                <p class="section-subtitle">Value for Money</p>
+                <p class="section-subtitle">Affordable Purity</p>
                 <h2 class="section-title">Aqua S Water Purifiers</h2>
                 <div class="section-line"></div>
-                <p class="section-desc">Aqua S water purifiers deliver powerful RO purification at an affordable price
-                    point. Perfect for budget-conscious families who refuse to compromise on water quality, Aqua S
-                    combines essential purification features with reliable, long-lasting performance.</p>
+                <p class="section-desc">Aqua S water purifiers combine advanced RO technology with affordable pricing.
+                    Compact, efficient, and reliable — perfect for every Indian home. Browse our Aqua S range with free
+                    installation in Jaipur.</p>
             </div>
-            <div class="product-card-alt animate-on-scroll">
-                <div class="product-card-img"><img src="assets/kent-ace.png" alt="Aqua S Water Purifier"></div>
-                <div class="product-card-content">
-                    <h3>Affordable Excellence</h3>
-                    <p>Aqua S proves that great water purification doesn't have to be expensive. These purifiers pack
-                        essential RO filtration, sediment removal, and carbon treatment into a compact, well-built unit
-                        that delivers clean water day after day.</p>
-                    <ul class="product-highlights">
-                        <li><i class="fas fa-check"></i> Multi-stage RO purification</li>
-                        <li><i class="fas fa-check"></i> Budget-friendly pricing</li>
-                        <li><i class="fas fa-check"></i> Compact wall-mount design</li>
-                        <li><i class="fas fa-check"></i> Low maintenance costs</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary">Get Best Price</a>
+
+            <div class="products-grid">
+
+                <!-- 1. Aqua-S -->
+                <div class="product-card-item animate-on-scroll">
+                    <div class="product-img"><img src="assets/kent-ace.png" alt="Aqua-S"></div>
+                    <div class="product-body">
+                        <h3 class="product-name">Aqua-S</h3>
+                        <p class="product-desc">Compact RO+UV purifier with TDS Adjuster. 90–95% TDS reduction with 12
+                            L/hr production rate and 8L storage tank. Reliable everyday purification for homes.</p>
+                        <div class="product-price">
+                            <span class="price-current">Call for Price</span>
+                        </div>
+                        <ul class="product-specs">
+                            <li>12 L/hr</li>
+                            <li>8L Tank</li>
+                            <li>30W</li>
+                            <li>RO+UV</li>
+                            <li>TDS Adjuster</li>
+                        </ul>
+                        <a href="https://wa.me/9314522756?text=Hi, I'm interested in Aqua-S water purifier. Please share price and details."
+                            class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a>
+                    </div>
                 </div>
-            </div>
-            <div class="product-card-alt animate-on-scroll">
-                <div class="product-card-content">
-                    <h3>Smart Choice for Every Home</h3>
-                    <p>Whether you're setting up your first home or looking for an economical replacement, Aqua S is the
-                        smart choice. Reliable filtration, easy maintenance, and affordable spare parts make it the
-                        practical water purifier for every Indian family.</p>
-                    <ul class="product-highlights">
-                        <li><i class="fas fa-check"></i> Effective TDS reduction</li>
-                        <li><i class="fas fa-check"></i> Easy filter replacement</li>
-                        <li><i class="fas fa-check"></i> Quiet operation</li>
-                        <li><i class="fas fa-check"></i> Durable build quality</li>
-                        <li><i class="fas fa-check"></i> Free installation included</li>
-                    </ul>
+
+                <!-- 2. Aqua-S Transparent -->
+                <div class="product-card-item animate-on-scroll">
+                    <div class="product-img"><img src="assets/kent-superb.jpg" alt="Aqua-S Transparent"></div>
+                    <div class="product-body">
+                        <h3 class="product-name">Aqua-S Transparent</h3>
+                        <p class="product-desc">Upgraded transparent-body RO+UV+UF purifier with TDS Adjuster and Copper
+                            enrichment. 90% TDS reduction, 15 L/hr production, and 10L storage capacity.</p>
+                        <div class="product-price">
+                            <span class="price-current">Call for Price</span>
+                        </div>
+                        <ul class="product-specs">
+                            <li>15 L/hr</li>
+                            <li>10L Tank</li>
+                            <li>30W</li>
+                            <li>RO+UV+UF</li>
+                            <li>TDS Adjuster</li>
+                            <li>Copper</li>
+                        </ul>
+                        <div class="product-warranty"><i class="fas fa-shield-alt"></i> 1 Year Warranty</div>
+                        <a href="https://wa.me/9314522756?text=Hi, I'm interested in Aqua-S Transparent water purifier. Please share price and details."
+                            class="enquire-btn" target="_blank"><i class="fab fa-whatsapp"></i> Enquire Now</a>
+                    </div>
                 </div>
-                <div class="product-card-img"><img src="assets/kent-pearl.jpg" alt="Aqua S Features"></div>
+
             </div>
         </div>
     </section>
 
+    <!-- CTA Section -->
     <section class="blue-wave-section">
         <div class="blue-wave-top"><svg viewBox="0 0 1440 120" fill="none">
                 <path
@@ -116,8 +322,8 @@
             <div class="decor-dots center" style="justify-content:center;margin-bottom:24px"><span
                     style="background:#fff"></span><span style="background:rgba(255,255,255,.7)"></span><span
                     style="background:rgba(255,255,255,.5)"></span></div>
-            <p class="section-desc" style="color:rgba(255,255,255,.8);max-width:700px;margin:0 auto 30px">Great water
-                quality at a great price. Call us for the best deals on Aqua S purifiers in Jaipur!</p>
+            <p class="section-desc" style="color:rgba(255,255,255,.8);max-width:700px;margin:0 auto 30px">Affordable
+                water purification for every home. Call now for the best price on Aqua S purifiers in Jaipur!</p>
             <a href="tel:9309080706" class="btn"
                 style="background:#fff;color:var(--primary);font-weight:700;border:none;box-shadow:var(--shadow)">Call
                 9309080706</a>
@@ -172,7 +378,7 @@
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <p>©️ Copyright 2026 | Shantiraj Associates | All Rights Reserved | Powered by <a
+                <p>&copy; Copyright 2026 | Shantiraj Associates | All Rights Reserved | Powered by <a
                         href="https://shapesway.in" target="_blank" rel="noopener" style="color:#28a745;">Shapesway
                         Technologies Pvt. Ltd.</a></p>
             </div>
