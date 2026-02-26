@@ -650,36 +650,183 @@
     </section>
 
 
-    <!-- GIVE A REVIEW SECTION -->
-    <section class="review-map-section"
-        style="padding: 100px 0; background: linear-gradient(to bottom, #ffffff, #f8fafc);">
-        <div class="container animate-on-scroll">
-            <div class="section-header">
-                <p class="section-subtitle">Customer Feedback</p>
-                <h2 class="section-title">Give a Review</h2>
-                <div class="section-line"></div>
-                <p class="section-desc" style="max-width: 700px; margin: 0 auto;">Your satisfaction is our priority.
-                    Please share your experience with Shantiraj Associates and help us serve you better in the future.
-                </p>
-            </div>
+    <!-- GIVE A REVIEW SECTION (CREATIVE) -->
+    <section class="creative-review-section"
+        style="padding: 120px 0; background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); position: relative; overflow: hidden;">
+        <!-- Abstract Vector Shapes -->
+        <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.4; pointer-events: none;"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#bae6fd" fill-opacity="1"
+                d="M0,256L48,229.3C96,203,192,149,288,154.7C384,160,480,224,576,218.7C672,213,768,139,864,128C960,117,1056,171,1152,197.3C1248,224,1344,224,1392,224L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+            </path>
+        </svg>
+        <svg style="position: absolute; bottom: -5px; left: 0; width: 100%; height: auto; opacity: 0.3; pointer-events: none;"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#7dd3fc" fill-opacity="1"
+                d="M0,128L60,149.3C120,171,240,213,360,202.7C480,192,600,128,720,117.3C840,107,960,149,1080,186.7C1200,224,1320,256,1380,272L1440,288L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+            </path>
+        </svg>
+        <!-- Floating Elements -->
+        <div
+            style="position: absolute; top: 15%; right: 10%; width: 150px; height: 150px; background: radial-gradient(circle, #38bdf8 0%, rgba(56, 189, 248, 0) 70%); border-radius: 50%; opacity: 0.8; filter: blur(20px); animation: float 6s ease-in-out infinite;">
+        </div>
+        <div
+            style="position: absolute; bottom: 20%; left: 15%; width: 200px; height: 200px; background: radial-gradient(circle, #818cf8 0%, rgba(129, 140, 248, 0) 70%); border-radius: 50%; opacity: 0.6; filter: blur(25px); animation: float 8s ease-in-out infinite reverse;">
+        </div>
 
-            <div style="display: flex; flex-direction: column; align-items: center; gap: 40px; margin-top: 50px;">
-                <div class="map-wrapper"
-                    style="width: 100%; max-width: 900px; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.1); border: 8px solid #fff;">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.7478276579627!2d75.79689027543614!3d26.816156976704885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396dcb6375d146c1%3A0x7b843a73add33bc4!2sShanti%20Raj%20Ro%20Shop%20%2F%20Ro%20water%20Purifier%20Jaipur!5e0!3m2!1sen!2sin!4v1772015822899!5m2!1sen!2sin"
-                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <style>
+            @keyframes float {
+                0% {
+                    transform: translateY(0px) rotate(0deg);
+                }
+
+                50% {
+                    transform: translateY(-30px) rotate(15deg);
+                }
+
+                100% {
+                    transform: translateY(0px) rotate(0deg);
+                }
+            }
+
+            .review-card-creative {
+                background: rgba(255, 255, 255, 0.85);
+                backdrop-filter: blur(20px);
+                border: 1px solid rgba(255, 255, 255, 0.6);
+                border-radius: 40px;
+                padding: 70px 40px;
+                max-width: 850px;
+                margin: 0 auto;
+                text-align: center;
+                box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.1);
+                position: relative;
+                z-index: 10;
+                transition: transform 0.4s ease, box-shadow 0.4s ease;
+            }
+
+            .review-card-creative:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 40px 70px -15px rgba(0, 0, 0, 0.15);
+            }
+
+            .star-group {
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+                margin-bottom: 25px;
+            }
+
+            .star-icon {
+                color: #fbbf24;
+                font-size: 3rem;
+                animation: pulseStar 2s infinite;
+            }
+
+            .star-icon:nth-child(2) {
+                animation-delay: 0.2s;
+            }
+
+            .star-icon:nth-child(3) {
+                animation-delay: 0.4s;
+            }
+
+            .star-icon:nth-child(4) {
+                animation-delay: 0.6s;
+            }
+
+            .star-icon:nth-child(5) {
+                animation-delay: 0.8s;
+            }
+
+            @keyframes pulseStar {
+                0% {
+                    transform: scale(1);
+                    filter: drop-shadow(0 0 0 rgba(251, 191, 36, 0));
+                }
+
+                50% {
+                    transform: scale(1.15);
+                    filter: drop-shadow(0 0 15px rgba(251, 191, 36, 0.7));
+                }
+
+                100% {
+                    transform: scale(1);
+                    filter: drop-shadow(0 0 0 rgba(251, 191, 36, 0));
+                }
+            }
+
+            .review-btn-creative {
+                padding: 18px 55px;
+                font-size: 1.25rem;
+                border-radius: 50px;
+                background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+                color: white !important;
+                font-weight: 800;
+                display: inline-flex;
+                align-items: center;
+                gap: 15px;
+                transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                border: none;
+                cursor: pointer;
+                box-shadow: 0 15px 30px rgba(59, 130, 246, 0.4);
+                text-decoration: none;
+                margin-top: 40px;
+            }
+
+            .review-btn-creative:hover {
+                transform: scale(1.05) translateY(-5px);
+                box-shadow: 0 20px 40px rgba(59, 130, 246, 0.5);
+            }
+
+            .review-btn-creative img {
+                width: 32px;
+                height: 32px;
+                background: white;
+                border-radius: 50%;
+                padding: 6px;
+            }
+
+            .creative-review-heading {
+                font-size: 3.5rem;
+                font-weight: 900;
+                background: linear-gradient(135deg, #1e3a8a, #06b6d4);
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                margin-bottom: 20px;
+                letter-spacing: -1px;
+            }
+
+            .creative-review-text {
+                font-size: 1.3rem;
+                color: #475569;
+                max-width: 650px;
+                margin: 0 auto;
+                line-height: 1.7;
+                font-weight: 500;
+            }
+        </style>
+
+        <div class="container animate-on-scroll">
+            <div class="review-card-creative">
+                <div class="star-group">
+                    <i class="fas fa-star star-icon"></i>
+                    <i class="fas fa-star star-icon"></i>
+                    <i class="fas fa-star star-icon"></i>
+                    <i class="fas fa-star star-icon"></i>
+                    <i class="fas fa-star star-icon"></i>
                 </div>
+                <h2 class="creative-review-heading">We Value Your Feedback!</h2>
+                <p class="creative-review-text">
+                    Your satisfaction is the driving force behind everything we do. If you've had a great experience
+                    with <strong>Shantiraj Associates</strong>, we'd be thrilled if you could share it with the world.
+                </p>
 
                 <a href="https://search.google.com/local/writereview?placeid=ChIJoUbBddHLbTkRXLzTrXNKhHs"
-                    target="_blank" class="btn"
-                    style="padding: 16px 45px; font-size: 1.1rem; border-radius: 50px; background: #fff; color: #333; font-weight: 700; box-shadow: 0 10px 30px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 12px; transition: transform 0.3s ease, box-shadow 0.3s ease; border: 1px solid #eee;"
-                    onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.12)';"
-                    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.08)';">
+                    target="_blank" class="review-btn-creative">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
-                        alt="Google Logo" style="width: 24px; height: 24px;">
-                    Write a Google Review
+                        alt="Google Logo">
+                    Write a Review on Google
                 </a>
             </div>
         </div>
