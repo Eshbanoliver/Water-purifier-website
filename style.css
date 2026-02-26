@@ -4894,6 +4894,12 @@ ul {
         height: 65px;
         font-size: 35px;
     }
+
+    .footer-social {
+        justify-content: center;
+        margin-top: 20px !important;
+        padding-bottom: 10px;
+    }
 }
 
 /* Categories We Deal In - Uiverse Card */
