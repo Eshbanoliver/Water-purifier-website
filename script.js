@@ -168,30 +168,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // === Parallax on Hero ===
-    const heroBottle = document.querySelector('.hero-bottle');
-    if (heroBottle) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY < window.innerHeight) {
-                heroBottle.style.transform = `translateY(${window.scrollY * 0.15}px)`;
-            }
-        });
-    }
-
-    // === Typewriter on Hero ===
-    const heroSub = document.querySelector('.hero-subtitle');
-    if (heroSub) {
-        const text = heroSub.textContent;
-        heroSub.textContent = '';
-        heroSub.style.borderRight = '2px solid var(--primary-light)';
-        let i = 0;
-        function typeWriter() {
-            if (i < text.length) { heroSub.textContent += text.charAt(i); i++; setTimeout(typeWriter, 60); }
-            else { heroSub.style.borderRight = 'none'; }
-        }
-        setTimeout(typeWriter, 500);
-    }
-
     // === Hero Slider ===
     if (typeof Swiper !== 'undefined') {
         const heroSwiper = new Swiper('.hero-slider', {
