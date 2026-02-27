@@ -5113,3 +5113,39 @@ ul {
         height: 220px;
     }
 }
+/* ===== RESPONSIVE CTA BUTTON ANIMATIONS ===== */
+@keyframes pulse-green {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); transform: scale(1); }
+    50% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); transform: scale(1.02); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); transform: scale(1); }
+}
+
+@keyframes pulse-white {
+    0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); transform: scale(1); }
+    50% { box-shadow: 0 0 0 15px rgba(255, 255, 255, 0); transform: scale(1.05); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); transform: scale(1); }
+}
+
+.btn-white-pulse {
+    background: #fff;
+    color: var(--primary);
+    font-weight: 700;
+    border: none;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    animation: pulse-white 2.5s infinite;
+}
+.btn-white-pulse:hover {
+    transform: translateY(-5px) scale(1.05);
+    background: #f8fafc;
+    color: var(--primary-dark);
+    box-shadow: 0 15px 30px rgba(255, 255, 255, 0.4);
+    animation: none;
+}
+
+.product-card-item .enquire-btn {
+    animation: pulse-green 2.5s infinite;
+}
+.product-card-item .enquire-btn:hover {
+    animation: none !important;
+}
