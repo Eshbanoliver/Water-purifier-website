@@ -17,6 +17,151 @@
     <meta name="theme-color" content="#4f46e5">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <style>
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 28px;
+            padding: 20px 0
+        }
+
+        .product-card-item {
+            background: #fff;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(79, 70, 229, .08);
+            transition: all .4s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column
+        }
+
+        .product-card-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(79, 70, 229, .18)
+        }
+
+        .product-card-item .product-img {
+            width: 100%;
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f0f4ff 0%, #e8eeff 100%);
+            padding: 20px;
+            position: relative;
+            overflow: hidden
+        }
+
+        .product-card-item .product-img img {
+            max-height: 180px;
+            max-width: 90%;
+            object-fit: contain;
+            transition: transform .4s ease
+        }
+
+        .product-card-item:hover .product-img img {
+            transform: scale(1.08)
+        }
+
+        .product-card-item .product-body {
+            padding: 20px 22px 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1
+        }
+
+        .product-card-item .product-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--heading);
+            margin-bottom: 6px;
+            line-height: 1.3
+        }
+
+        .product-card-item .product-desc {
+            font-size: .82rem;
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 14px;
+            flex-grow: 1;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden
+        }
+
+        .product-card-item .product-specs {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 18px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px
+        }
+
+        .product-card-item .product-specs li {
+            font-size: .72rem;
+            background: #f0f4ff;
+            color: var(--primary);
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-weight: 500
+        }
+
+        .product-card-item .enquire-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 20px;
+            background: #25D366;
+            color: #fff;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: .9rem;
+            text-decoration: none;
+            transition: all .3s ease;
+            border: none;
+            cursor: pointer
+        }
+
+        .product-card-item .enquire-btn:hover {
+            background: #128C7E;
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, .3)
+        }
+
+        .product-card-item .enquire-btn i {
+            font-size: 1.1rem
+        }
+
+        @media(max-width:1024px) {
+            .products-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 22px
+            }
+        }
+
+        @media(max-width:768px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px
+            }
+
+            .product-card-item .product-img {
+                height: 180px
+            }
+        }
+
+        @media(max-width:480px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 16px
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -95,130 +240,178 @@
     <section class="product-alternating-section">
         <div class="container">
             <div class="section-header">
-                <p class="section-subtitle">Premium Solutions</p>
-                <h2 class="section-title">Kent RO Water Purifiers & Services</h2>
+                <p class="section-subtitle">Our Product Range</p>
+                <h2 class="section-title">Shop by Brands & Categories</h2>
                 <div class="section-line"></div>
-                <p class="section-desc">At Shantiraj Associates, we deal in 100% genuine Kent RO products and provide a
-                    complete ecosystem of water purification services. From expert product selection and factory-trained
-                    installation to lifelong maintenance and swift repair, we ensure your family’s health is never
-                    compromised.</p>
+                <p class="section-desc">At Shantiraj Associates, we deal in a wide variety of 100% genuine RO products across the best brands. Choose the perfect water purifier brand tailored for your family's health.</p>
             </div>
 
-            <!-- Card 1: General Dealer Section -->
-            <div class="product-card-alt animate-on-scroll">
-                <div class="product-card-img">
-                    <img src="assets/kent-dealer.jpg" alt="Authorized Kent RO Dealer">
+            <div class="categories-grid">
+                <!-- Category 1 -->
+                <div class="category-card animate-on-scroll">
+                    <div class="category-image">
+                        <img src="assets/kent_ro_purifier.png" alt="Kent RO Water Purifiers">
+                        <div class="category-badge">Authorized</div>
+                    </div>
+                    <div class="category-info">
+                        <h3>Kent RO Water Purifiers</h3>
+                        <p>India's most trusted RO brand with advanced RO+UV+UF+TDS control technology for pure,
+                            mineral-rich drinking water.</p>
+                        <a href="kent-ro-water-purifiers.html" class="category-btn">
+                            <span>Discover More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="product-card-content">
-                    <h3>Authorized Kent RO Dealer</h3>
-                    <p>As Jaipur’s trusted authorized partner, we provide the latest range of Kent RO water purifiers.
-                        Choosing us means you get certified products with official manufacturer warranties, and the
-                        peace of mind that comes with expert technical support.</p>
-                    <ul class="product-highlights">
-                        <li><i class="fas fa-check"></i> 100% Genuine Kent Products</li>
-                        <li><i class="fas fa-check"></i> Official Brand Warranty</li>
-                        <li><i class="fas fa-check"></i> Certified Technical Guidance</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary">Contact Us</a>
+
+                <!-- Category 2 -->
+                <div class="category-card animate-on-scroll">
+                    <div class="category-image">
+                        <img src="assets/marlin_ro_purifier.png" alt="Marlin RO Water Purifiers">
+                        <div class="category-badge h-bg">Popular</div>
+                    </div>
+                    <div class="category-info">
+                        <h3>Marlin RO Water Purifiers</h3>
+                        <p>High-performance RO purifiers with modern design, multi-stage filtration, and reliable water
+                            purification.</p>
+                        <a href="marlin-ro-water-purifiers.html" class="category-btn">
+                            <span>Discover More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Category 3 -->
+                <div class="category-card animate-on-scroll">
+                    <div class="category-image">
+                        <img src="assets/apple_alpha.jpg" alt="Apple Water Purifiers">
+                    </div>
+                    <div class="category-info">
+                        <h3>Apple Water Purifiers</h3>
+                        <p>Feature-rich water purifiers with sleek designs and advanced filtration for clean, safe, and
+                            healthy water.</p>
+                        <a href="apple-water-purifiers.html" class="category-btn">
+                            <span>Discover More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Category 4 -->
+                <div class="category-card animate-on-scroll">
+                    <div class="category-image">
+                        <img src="assets/nexlin_vibe_purifier.png" alt="Nexlin Vibe">
+                    </div>
+                    <div class="category-info">
+                        <h3>Nexlin Vibe</h3>
+                        <p>Next-generation water purifiers with cutting-edge filtration, smart features, and compact
+                            modern aesthetics.</p>
+                        <a href="nexlin-vibe.html" class="category-btn">
+                            <span>Discover More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Category 5 -->
+                <div class="category-card animate-on-scroll">
+                    <div class="category-image">
+                        <img src="assets/aqua_s_purifier.png" alt="Aqua S">
+                    </div>
+                    <div class="category-info">
+                        <h3>Aqua S</h3>
+                        <p>Affordable yet powerful water purifiers combining advanced RO technology with budget-friendly
+                            pricing.</p>
+                        <a href="aqua-s.html" class="category-btn">
+                            <span>Discover More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Category 6 -->
+                <div class="category-card animate-on-scroll">
+                    <div class="category-image">
+                        <img src="assets/aqua_ro_purifier.png" alt="Aqua RO Water Purifiers">
+                    </div>
+                    <div class="category-info">
+                        <h3>Aqua RO Water Purifiers</h3>
+                        <p>Trusted Aqua-brand RO systems delivering high TDS reduction and crystal-clear purified water
+                            for every household.</p>
+                        <a href="aqua-ro-water-purifiers.html" class="category-btn">
+                            <span>Discover More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Category 7 -->
+                <div class="category-card animate-on-scroll">
+                    <div class="category-image">
+                        <img src="assets/wave_ro_purifier.png" alt="Wave RO Water Purifiers">
+                    </div>
+                    <div class="category-info">
+                        <h3>Wave RO Water Purifiers</h3>
+                        <p>Durable and efficient RO purifiers with multi-stage purification and long-lasting filter life
+                            for daily use.</p>
+                        <a href="wave-ro-water-purifiers.html" class="category-btn">
+                            <span>Discover More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Category 8 -->
+                <div class="category-card animate-on-scroll">
+                    <div class="category-image">
+                        <img src="assets/water_cooler_user.jpg" alt="Water Coolers">
+                    </div>
+                    <div class="category-info">
+                        <h3>Water Coolers</h3>
+                        <p>Stainless steel water coolers for chilled water supply in schools, offices, factories, and
+                            public spaces.</p>
+                        <a href="water-coolers.html" class="category-btn">
+                            <span>Discover More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Category 9 -->
+                <div class="category-card animate-on-scroll">
+                    <div class="category-image">
+                        <img src="assets/commercial_ro_user.jpg" alt="Commercial RO Water Purifier">
+                        <div class="category-badge">Industrial</div>
+                    </div>
+                    <div class="category-info">
+                        <h3>Commercial RO Water Purifier</h3>
+                        <p>High-capacity industrial RO systems for hospitals, hotels, restaurants, and large-scale
+                            establishments.</p>
+                        <a href="commercial-ro-water-purifier.html" class="category-btn">
+                            <span>Discover More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Category 10 -->
+                <div class="category-card animate-on-scroll">
+                    <div class="category-image">
+                        <img src="assets/spare_parts_user.jpg" alt="All RO Spare Parts">
+                        <div class="category-badge">Genuine</div>
+                    </div>
+                    <div class="category-info">
+                        <h3>All RO Spare Parts</h3>
+                        <p>Genuine filters, membranes, pumps, solenoid valves, and accessories for all RO brands and
+                            models.</p>
+                        <a href="all-ro-spare-parts.html" class="category-btn">
+                            <span>Discover More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-
-            <!-- Card 2: Kent Pearl -->
-            <div class="product-card-alt animate-on-scroll">
-                <div class="product-card-img">
-                    <img src="assets/kent-pearl.jpg" alt="Kent Pearl RO">
-                </div>
-                <div class="product-card-content">
-                    <h3>Kent Pearl RO</h3>
-                    <p>The Kent Pearl features a transparent detachable tank and RO+UV+UF+TDS Control technology. Its
-                        modular design is perfect for modern kitchens where water quality monitoring and easy tank
-                        cleaning are top priorities.</p>
-                    <ul class="product-highlights">
-                        <li><i class="fas fa-check"></i> RO+UV+UF+TDS Control</li>
-                        <li><i class="fas fa-check"></i> Transparent Detachable Tank</li>
-                        <li><i class="fas fa-check"></i> Ideal for all water sources</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary">Contact Us</a>
-                </div>
-            </div>
-
-            <!-- Card 3: Kent Prime -->
-            <div class="product-card-alt animate-on-scroll">
-                <div class="product-card-img">
-                    <img src="assets/kent-prime.jpg" alt="Kent Prime RO">
-                </div>
-                <div class="product-card-content">
-                    <h3>Kent Prime RO</h3>
-                    <p>Designed for large families, the Kent Prime offers double purification and high storage capacity.
-                        It utilizes Mineral RO technology to retain essential natural minerals in purified water,
-                        ensuring it is not just clean but healthy.</p>
-                    <ul class="product-highlights">
-                        <li><i class="fas fa-check"></i> Double Purification Technology</li>
-                        <li><i class="fas fa-check"></i> High Storage Capacity</li>
-                        <li><i class="fas fa-check"></i> Retains Essential Minerals</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary">Contact Us</a>
-                </div>
-            </div>
-
-            <!-- Card 4: Kent Superb -->
-            <div class="product-card-alt animate-on-scroll">
-                <div class="product-card-img">
-                    <img src="assets/kent-superb.jpg" alt="Kent Superb RO">
-                </div>
-                <div class="product-card-content">
-                    <h3>Kent Superb RO</h3>
-                    <p>A smart RO purifier with a digital display that monitors water purity and filter life in
-                        real-time. The Kent Superb is perfect for tech-savvy households looking for a high-performance,
-                        wall-mounted purification solution.</p>
-                    <ul class="product-highlights">
-                        <li><i class="fas fa-check"></i> Real-time Monitoring Display</li>
-                        <li><i class="fas fa-check"></i> Smart Filter Life Indicator</li>
-                        <li><i class="fas fa-check"></i> Premium wall-mounted design</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary">Contact Us</a>
-                </div>
-            </div>
-
-            <!-- Card 5: Kent Supreme -->
-            <div class="product-card-alt animate-on-scroll">
-                <div class="product-card-img">
-                    <img src="assets/kent-supreme.png" alt="Kent Supreme RO">
-                </div>
-                <div class="product-card-content">
-                    <h3>Kent Supreme RO</h3>
-                    <p>The Kent Supreme is built with Save Water Technology to minimize water wastage. It provides 100%
-                        pure water through double purification, making it a sustainable and efficient choice for
-                        environmentally conscious consumers.</p>
-                    <ul class="product-highlights">
-                        <li><i class="fas fa-check"></i> Zero Water Wastage Technology</li>
-                        <li><i class="fas fa-check"></i> High Extraction RO Membrane</li>
-                        <li><i class="fas fa-check"></i> 100% Pure & Safe Water</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary">Contact Us</a>
-                </div>
-            </div>
-
-            <!-- Card 6: Kent Ace -->
-            <div class="product-card-alt animate-on-scroll">
-                <div class="product-card-img">
-                    <img src="assets/kent-ace.png" alt="Kent Ace RO">
-                </div>
-                <div class="product-card-content">
-                    <h3>Kent Ace RO</h3>
-                    <p>Compact, reliable, and powerful — the Kent Ace is an excellent budget-friendly RO purifier. Its
-                        wall-mountable design saves space while the multidimensional purification ensures every drop is
-                        free from harmful impurities.</p>
-                    <ul class="product-highlights">
-                        <li><i class="fas fa-check"></i> RO+UF+TDS Control</li>
-                        <li><i class="fas fa-check"></i> Compact Space-saving Design</li>
-                        <li><i class="fas fa-check"></i> Most Reliable Entry-level RO</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary">Contact Us</a>
-                </div>
-            </div>
-
-        </div>
+        
     </section>
 
     <!-- OUR RO SERVICES SECTION -->
