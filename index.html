@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="assets/logo.png">
     <meta name="theme-color" content="#4f46e5">
@@ -90,27 +91,63 @@
         </div>
     </header>
 
-    <!-- HERO -->
-    <section class="hero" id="home">
-        <div class="hero-bg-overlay"></div>
-        <div class="container hero-container">
-            <div class="hero-content">
-                <div class="hero-subtitle-banner">AUTHORIZED KENT RO DEALER IN JAIPUR</div>
-                <h1 class="hero-title">Pure Water,<br>Healthy Life</h1>
-                <p class="hero-desc">Shantiraj Associates is your trusted authorized Kent RO water purifier dealer in
-                    Jaipur. We deliver certified Kent products — from sales and installation to annual maintenance —
-                    ensuring every drop your family drinks is safe, clean, and mineral-rich.</p>
-                <div class="hero-btns">
-                    <a href="about.html" class="btn btn-hero">Discover More</a>
+    <!-- HERO SLIDER SECTION -->
+    <section class="hero-slider swiper" id="home">
+        <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide hero-slide" style="background-image: url('assets/hero_slider_3.jpg');">
+                <div class="hero-overlay"></div>
+                <div class="container hero-slide-content">
+                    <div class="hero-badge animate-up">Jaipur's Best RO Store</div>
+                    <h1 class="hero-title animate-up">Jaipur's Best <span class="highlight">RO Water Purifier</span>
+                        Shop</h1>
+                    <p class="hero-desc animate-up">Authorized Multi-Brand Dealer providing 100% genuine products with
+                        expert doorstep service.</p>
+                    <div class="hero-btns animate-up">
+                        <a href="about.html" class="btn btn-hero">About Us</a>
+                        <a href="services.html" class="btn btn-hero btn-white">Our Services</a>
+                    </div>
                 </div>
             </div>
-            <div class="hero-jug-showcase">
-                <img src="assets/hero-purifier.png" alt="Kent RO Water Purifier Shantiraj Associates Jaipur"
-                    class="hero-main-jug">
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide hero-slide" style="background-image: url('assets/hero_slider_1.jpg');">
+                <div class="hero-overlay"></div>
+                <div class="container hero-slide-content">
+                    <div class="hero-badge animate-up">Shantiraj Associates</div>
+                    <h2 class="hero-title animate-up">Pure Water for a <span class="highlight">Healthy Life</span></h2>
+                    <p class="hero-desc animate-up">Your trusted authorized Kent RO dealer in Jaipur. Ensuring every
+                        drop your family drinks is safe.</p>
+                    <div class="hero-btns animate-up">
+                        <a href="about.html" class="btn btn-hero">About Us</a>
+                        <a href="services.html" class="btn btn-hero btn-white">Our Services</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide hero-slide" style="background-image: url('assets/hero_slider_2.jpg');">
+                <div class="hero-overlay"></div>
+                <div class="container hero-slide-content">
+                    <div class="hero-badge animate-up">Trusted & Reliable</div>
+                    <h2 class="hero-title animate-up">Expert Repair <span class="highlight">& Support</span></h2>
+                    <p class="hero-desc animate-up">Jaipur's leading service center for all RO brands. Same-day
+                        installation and maintenance.</p>
+                    <div class="hero-btns animate-up">
+                        <a href="about.html" class="btn btn-hero">About Us</a>
+                        <a href="services.html" class="btn btn-hero btn-white">Our Services</a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="hero-slant-bottom"></div>
 
+        <!-- Slider UI -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+        <!-- Slant Design -->
+        <div class="hero-slant-bottom"></div>
     </section>
 
     <!-- BRANDS WE DEAL IN -->
@@ -1448,6 +1485,7 @@
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 

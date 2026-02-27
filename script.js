@@ -191,4 +191,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         setTimeout(typeWriter, 500);
     }
+
+    // === Hero Slider ===
+    if (typeof Swiper !== 'undefined') {
+        const heroSwiper = new Swiper('.hero-slider', {
+            loop: true,
+            effect: 'fade',
+            fadeEffect: { crossFade: true },
+            autoplay: { delay: 5000, disableOnInteraction: false },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+            speed: 1000,
+        });
+    }
 });
