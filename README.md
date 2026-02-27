@@ -14,7 +14,7 @@ A high-performance, modern, and responsive multi-page website template designed 
   - Infinite scroll testimonial slider.
 - **Service Management**: Dedicated sections for Installation, AMC (Annual Maintenance Contract), and Repair services.
 - **Contact & Leads**: Integrated contact forms and clear Call-to-Action (CTA) buttons throughout the site.
-- **SEO Optimized**: Semantic HTML5 structure with proper meta tags for better search engine visibility.
+- **SEO Optimized**: Semantic HTML5 structure with proper meta tags, `robots.txt`, and `sitemap.xml` for maximum search engine visibility.
 - **Location Integration**: Embedded Google Maps for physical store location.
 
 ## 🛠️ Technologies Used
@@ -35,6 +35,8 @@ A high-performance, modern, and responsive multi-page website template designed 
 ├── faq.html            # Frequently Asked Questions
 ├── contact.html        # Contact Us page
 ├── style.css           # Global stylesheets and design system
+├── robots.txt          # Search engine instructions
+├── sitemap.xml         # Search engine index of all pages
 └── script.js           # Core website logic and animations
 ```
 
