@@ -631,16 +631,48 @@ ul {
     max-width: 700px;
 }
 
+.hero-slide .btn-hero {
+    background: var(--primary-gradient) !important;
+    color: var(--white) !important;
+    padding: 16px 40px;
+    border-radius: 50px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    box-shadow: 0 10px 25px rgba(79, 70, 229, 0.4);
+    border: 2px solid transparent !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.hero-slide .btn-hero:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(79, 70, 229, 0.6);
+    background: var(--primary) !important;
+}
+
 .hero-slide .btn-white {
-    background: var(--white);
-    color: var(--primary);
+    background: #ffffff !important;
+    color: var(--primary) !important;
+    padding: 16px 40px;
+    border-radius: 50px;
+    font-size: 1.05rem;
+    font-weight: 700;
     box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+    border: 2px solid #ffffff !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
     margin-left: 15px;
 }
 
 .hero-slide .btn-white:hover {
-    background: var(--primary-light);
-    color: var(--white);
+    background: transparent !important;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
 }
 
 .hero-slider .swiper-pagination-bullet {
